@@ -64,16 +64,16 @@ exports.createProduct = catchAsync(async (req, res, next) => {
       });
     }
     if (videoPath) {
-        await deleteOldFiles(videoPath).catch((err) => {
-          console.error("Failed to delete thumb image:", err);
-        });
-      }
+      await deleteOldFiles(videoPath).catch((err) => {
+        console.error("Failed to delete thumb image:", err);
+      });
+    }
     if (downloadImagePath) {
       await deleteOldFiles(downloadImagePath).catch((err) => {
         console.error("Failed to delete download image:", err);
       });
     }
-    if (catalogueImagePaths.length > 0) {
+    if (catalogueImagePaths?.length > 0) {
       await Promise.all(
         catalogueImagePaths.map((path) =>
           deleteOldFiles(path).catch((err) => {

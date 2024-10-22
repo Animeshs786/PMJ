@@ -11,9 +11,13 @@ exports.createStore = catchAsync(async (req, res, next) => {
     return next(new AppError("Please provide all the required fields", 400));
   }
 
-  const images = req.files.image.map(
-    (file) => `${file.destination}/${file.filename}`
-  );
+  let images;
+
+  if (req.files && req.files.image) {
+    images = req.files?.image?.map(
+      (file) => `${file.destination}/${file.filename}`
+    );
+  }
 
   const newStore = await Store.create({
     address,

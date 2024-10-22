@@ -15,11 +15,11 @@ const adminSchema = new mongoose.Schema(
       unique: [true, "Email already exist."],
       validate: [validator.isEmail, "Email should not be valid."],
     },
-    mobile: {
-      type: String,
-      required: [true, "Mobile must be required."],
-      unique: [true, "Mobile already exist."],
-    },
+    // mobile: {
+    //   type: String,
+    //   required: [true, "Mobile must be required."],
+    //   unique: [true, "Mobile already exist."],
+    // },
     otp: {
       type: String,
       select: false,

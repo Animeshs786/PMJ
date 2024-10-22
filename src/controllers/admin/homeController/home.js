@@ -9,7 +9,7 @@ exports.homeController = catchAsync(async (req, res) => {
     privacyPolicyDetails,
     termCondition,
     termConditionDetails,
-    id="6707c53a47953ec0f4270050",
+    id="6710dd8c443f484196bc5fb0",
   } = req.body;
 
   const updateData = {};

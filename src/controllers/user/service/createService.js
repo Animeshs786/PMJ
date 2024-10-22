@@ -20,7 +20,7 @@ exports.createService = catchAsync(async (req, res, next) => {
 
   res.status(201).json({
     status: true,
-    message: "Visit request created successfully",
+    message: "Service request created successfully",
     data: {
       visit: goldExchange,
     },

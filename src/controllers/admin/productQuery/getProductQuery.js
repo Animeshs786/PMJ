@@ -11,7 +11,7 @@ exports.getProductQuery = catchAsync(async (req, res, next) => {
       return next(new AppError("Invalid product query ID", 400));
     }
   
-    const productQuery = await ProductQuery.findById(id).populate("product");
+    const productQuery = await ProductQuery.findById(id);
   
     if (!productQuery) {
       return next(new AppError("Product query not found", 404));

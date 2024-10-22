@@ -89,3 +89,4 @@ exports.generateUserBill = catchAsync(async (req, res, next) => {
     data: bills,
   });
 });
+

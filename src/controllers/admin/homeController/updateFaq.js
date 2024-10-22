@@ -3,7 +3,7 @@ const Home = require("../../../models/home");
 exports.updateFaq = async (req, res, next) => {
   try {
     const { faqId, question, answer } = req.body;
-    const home = await Home.findById("6707c53a47953ec0f4270050");
+    const home = await Home.findById("6710dd8c443f484196bc5fb0");
 
     const faq = home.faq.id(faqId);
     if (faq) {
